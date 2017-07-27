@@ -4,6 +4,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Example Component</div>
+                {{selected}}
                 <div class="panel-body">
                     <select2 :options="options" v-model="selected">
                         <option disabled value="0">Select one</option>

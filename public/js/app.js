@@ -41942,6 +41942,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -41972,7 +41973,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel panel-default"
   }, [_c('div', {
     staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Example Component")]), _vm._v("\n                " + _vm._s(_vm.selected) + "\n                "), _c('div', {
     staticClass: "panel-body"
   }, [_c('select2', {
     attrs: {
