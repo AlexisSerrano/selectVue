@@ -26,7 +26,7 @@ export default {
     },
     options: function (options) {
       // update options
-      $(this.$el).select2({ data: options })
+      $(this.$el).empty().trigger('change').select2({ data: options })
     }
   },
   destroyed: function () {
