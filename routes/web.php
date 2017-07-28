@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('GetCountries','ServiceController@GetCountries');
+Route::get('GetStates/{id}','ServiceController@GetStates');

@@ -1,18 +1,19 @@
 <template>
-	<select>
+	<select class="form-control">
     <slot></slot>
   </select>
 </template>
 <script>
 import Select2 from 'select2';
 export default {
-     props: ['options', 'value'],
-      mounted: function () {
+  props: ['options', 'value'],
+  mounted: function () {
     var vm = this
     $(this.$el)
-      .val(this.value)
       // init select2
       .select2({ data: this.options })
+      .val(this.value)
+      .trigger('change')
       // emit event on change.
       .on('change', function () {
         vm.$emit('input', this.value)
@@ -21,7 +22,7 @@ export default {
   watch: {
     value: function (value) {
       // update value
-      $(this.$el).val(value)
+      $(this.$el).val(value).trigger('change');
     },
     options: function (options) {
       // update options
@@ -33,3 +34,8 @@ export default {
   }
 }
 </script>
+<style>
+  select{
+    width: 100%;
+  }
+</style>
